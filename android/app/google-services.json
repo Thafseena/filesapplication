@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "737113779881",
+    "project_id": "filesapp-be881",
+    "storage_bucket": "filesapp-be881.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737113779881:android:9ea5ef6b2e4cbe303f03b8",
+        "android_client_info": {
+          "package_name": "com.example.filesapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9P3GND6_9LzGh1TUcERUb4mGpeFcfMm0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
