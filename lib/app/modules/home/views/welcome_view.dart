@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:developer';
 
 import 'package:filesapplication/app/modules/home/controllers/welcome_controller.dart';
 import 'package:filesapplication/app/modules/home/utils/colors.dart';
@@ -48,11 +49,12 @@ class WelcomeView extends GetView<WelcomeController> {
                 child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 200,
-                childAspectRatio: 3 / 2,
+                childAspectRatio: 3/ 2,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20),
             itemCount: choices.length,
             itemBuilder: (BuildContext ctx, index) {
+              // log("inside grid=="+controller.choicelist.length.toString());
               return Container(
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
@@ -74,7 +76,12 @@ class WelcomeView extends GetView<WelcomeController> {
         backgroundColor: AppColors.buttonBackgroundColor,
         child: Icon(Icons.add),
         onPressed: (){
-        
+           controller.createItem();
+          // log("list:"+controller.choicelist.length.toString());
+                //  setState(() {
+                //  Choice(title: "New Folder", icon:Icons.folder );  
+                //   });
+       
         // Get.to(DocumentCreate());
         // _createFolder();
        })

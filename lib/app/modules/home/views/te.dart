@@ -41,18 +41,19 @@ String image="";
             if(status==PermissionStatus.granted){
               //read file
             var read=await File(image).readAsBytes();
-            // create folder
-            final folderName="aaaaaa";
-           final path= Directory("/storage/emulated/0/$folderName");
-            //create file
-            if ((await path.exists())){
-  // TODO:
-  print("exist");
-}else{
-  // TODO:
-  print("not exist");
-  path.create();
-}
+            // create folder working code for folder creation
+//             final folderName="aaaaaa";
+//            final path= Directory("/storage/emulated/0/$folderName");
+          
+//             if ((await path.exists())){
+//   // TODO:
+//   print("exist");
+// }else{
+//   // TODO:
+//   print("not exist");
+//   path.create();
+// }
+   //create file
           //   var newfile=await File("/storage/emulated/0/").create(recursive: true);
           //   // write file
           //  await newfile.writeAsBytes(read);

@@ -5,7 +5,6 @@ class Choice {
   final String title;  
   final IconData icon;  
 } 
-
 const List<Choice> choices = const <Choice>[  
   const Choice(title: 'Adhaar', icon: Icons.folder),  
   const Choice(title: 'Pan', icon: Icons.folder),  
@@ -13,6 +12,14 @@ const List<Choice> choices = const <Choice>[
   // const Choice(title: 'Add Folder', icon: Icons.add),  
  
 ];
+
+// const List<Choice> choices = const <Choice>[  
+//   const Choice(title: 'Adhaar', icon: Icons.folder),  
+//   const Choice(title: 'Pan', icon: Icons.folder),  
+//   const Choice(title: 'License', icon: Icons.folder),  
+//   // const Choice(title: 'Add Folder', icon: Icons.add),  
+ 
+// ];
 
 class SelectCard extends StatelessWidget {  
  const SelectCard({Key? key,required this.choice}) : super(key: key);  
