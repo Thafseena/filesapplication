@@ -1,10 +1,14 @@
+import 'dart:io';
+
 import 'package:filesapplication/app/modules/home/controllers/welcome_controller.dart';
 import 'package:filesapplication/app/modules/home/utils/colors.dart';
 import 'package:filesapplication/app/modules/home/utils/dimensions.dart';
 import 'package:filesapplication/app/modules/home/views/choice_view.dart';
+import 'package:filesapplication/app/modules/home/views/document_create.dart';
 import 'package:filesapplication/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:path_provider/path_provider.dart';
 
 class WelcomeView extends GetView<WelcomeController> {
   @override
@@ -70,7 +74,9 @@ class WelcomeView extends GetView<WelcomeController> {
         backgroundColor: AppColors.buttonBackgroundColor,
         child: Icon(Icons.add),
         onPressed: (){
-
+        
+        // Get.to(DocumentCreate());
+        // _createFolder();
        })
     
        ] ),
@@ -92,4 +98,33 @@ class WelcomeView extends GetView<WelcomeController> {
         ),
     );
   }
+   Future<String> createFolder(String cow) async {
+ final dir = Directory((Platform.isAndroid
+            ? await getExternalStorageDirectory() //FOR ANDROID
+            : await getApplicationSupportDirectory() //FOR IOS
+        )!
+        .path + '/$cow');
+    var status = 200;
+    if (status==200) {
+    //  await Permission.storage.request();
+    }
+    if ((await dir.exists())) {
+      return dir.path;
+    } else {
+      dir.create();
+      return dir.path;
+    }
+  }
+   _createFolder()async{
+final folderName="Documents";
+final path= Directory("/storage/emulated/0/$folderName");
+if ((await path.exists())){
+  // TODO:
+  print("exist");
+}else{
+  // TODO:
+  print("not exist");
+  path.create();
+}
+}
 }

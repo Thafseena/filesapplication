@@ -41,6 +41,14 @@ dependencies:
   get: ^4.6.5
   firebase_storage: ^11.2.1
   file_picker: ^5.3.1
+  image_cropper: ^4.0.1
+  http: ^0.13.6
+  cloud_firestore: ^4.7.1
+  uuid: ^3.0.7
+  path_provider: ^2.0.15
+  path: ^1.8.3
+  permission_handler: ^10.2.0
+  image_picker: ^0.8.7+5
 
 dev_dependencies:
   flutter_test:
