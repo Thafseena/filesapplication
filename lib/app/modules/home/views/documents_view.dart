@@ -3,7 +3,7 @@ import 'package:filesapplication/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DocumentView extends GetView<WelcomeController> {
+class DocumentCreate extends GetView<WelcomeController> {
   // const DocumentView({super.key});
 
   @override

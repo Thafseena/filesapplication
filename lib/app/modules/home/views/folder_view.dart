@@ -113,7 +113,7 @@ log(file!.path.toString());
       floatingActionButton: FloatingActionButton(
         child: Text("View",style: TextStyle(fontSize: 15, color: Colors.white)),
         onPressed: () {
-          Get.to(DocumentView());
+          Get.to(DocumentCreate());
       //   // log("filepath=="+file!.path);
       //     //  final fileName = file != null ? File(file!.path) : 'No File Selected';
       //     //  selectFile();
