@@ -7,10 +7,14 @@ import 'package:filesapplication/app/modules/home/api/firebase_api.dart';
 import 'package:filesapplication/app/modules/home/utils/dimensions.dart';
 import 'package:filesapplication/app/modules/home/views/button_widget.dart';
 import 'package:filesapplication/app/modules/home/views/documents_view.dart';
+import 'package:filesapplication/app/modules/home/views/viewstoreddatas.dart';
+import 'package:filesapplication/app/routes/app_pages.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:uuid/uuid.dart';
 
 class FolderView extends StatefulWidget {
@@ -23,6 +27,7 @@ class _FolderViewState extends State<FolderView> {
   UploadTask? task;
   File? file;
   String ? fileid;
+  late FirebaseStorage firebase_storage;
    
    
      CollectionReference productRef =
@@ -104,6 +109,16 @@ log(file!.path.toString());
            icon: Icons.cloud_upload_outlined,
            onClicked: uploadProduct,
          ),
+         SizedBox(height: 5,),
+ ButtonWidget(
+           text: 'View All uploaded file',
+           icon: Icons.cloud_upload_outlined,
+           onClicked:(){
+        Get.toNamed(AppPages.viw);
+           },
+         ),
+
+
          SizedBox(height: 20),
          task != null ? buildUploadStatus(task!) : Container(),
             ],
@@ -214,4 +229,8 @@ log(file!.path.toString());
           }
         },
       );
+
+
+
+
 }

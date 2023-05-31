@@ -5,6 +5,7 @@ import 'package:filesapplication/app/modules/home/bindings/welcome_binding.dart'
 import 'package:filesapplication/app/modules/home/views/folder_view.dart';
 import 'package:filesapplication/app/modules/home/views/home_view.dart';
 import 'package:filesapplication/app/modules/home/views/login_view.dart';
+import 'package:filesapplication/app/modules/home/views/viewstoreddatas.dart';
 import 'package:filesapplication/app/modules/home/views/welcome_view.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
@@ -14,6 +15,8 @@ class AppPages {
 
   static const INITIAL = Routes.HOME;
   static const NAVIGATE = Routes.FOLDER;
+   static const viw = Routes.view;
+
 
   static final routes = [
     GetPage(
@@ -33,6 +36,10 @@ class AppPages {
     ),
     GetPage(name: _Paths.FOLDER,
      page: ()=>FolderView(),
+     binding: FolderBinding()),
+
+      GetPage(name: _Paths.view,
+     page: ()=>Viewstoreddata(),
      binding: FolderBinding())
   ];
 }
