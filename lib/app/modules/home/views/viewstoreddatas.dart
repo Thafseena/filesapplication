@@ -30,7 +30,7 @@ class AddData extends StatelessWidget {
             children: snapshot.data!.docs.map((document) {
               return Container(
                 child: Center(child: 
-                Text(document['image'])
+                Text(document['image']),
                 // Image.network(document['image'])
                 
                 ),
